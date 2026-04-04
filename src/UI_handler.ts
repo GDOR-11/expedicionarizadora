@@ -34,7 +34,9 @@ for (const id in elements) {
     if (!(language_tag in languages)) language_tag = "pt";
     let language = languages[language_tag as keyof typeof languages];
     for (let id in language) {
-        elements[id].textContent = language[id as keyof typeof language];
+        document.querySelectorAll(`[data-i18n="${id}"]`).forEach(element => {
+            element.textContent = language[id as keyof typeof language];
+        });
     }
 })();
 
