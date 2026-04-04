@@ -1,35 +1,35 @@
 {
     "en": {
-        "new-textbox": "new textbox",
-        "select-all": "select all",
-        "edit-textbox": "edit texbox",
-        "delete-textbox": "delete textbox",
-        "increase-size": "increase size",
-        "decrease-size": "decrease size",
-        "switch-alignment": "switch alignment",
-        "textbox-editor-done": "done",
-        "textbox-editor-cancel": "cancel"
+        "header.new-textbox": "new textbox",
+        "header.select-all": "select all",
+        "header.edit-textbox": "edit texbox",
+        "header.delete-textbox": "delete textbox",
+        "header.increase-size": "increase size",
+        "header.decrease-size": "decrease size",
+        "header.switch-alignment": "switch alignment",
+        "textbox-editor.done": "done",
+        "textbox-editor.cancel": "cancel"
     },
     "pt": {
-        "new-textbox": "nova caixa de texto",
-        "select-all": "selecionar tudo",
-        "edit-textbox": "editar caixa de texto",
-        "delete-textbox": "excluir caixa de texto",
-        "increase-size": "aumentar tamanho",
-        "decrease-size": "diminuir tamanho",
-        "switch-alignment": "trocar alinhamento",
-        "textbox-editor-done": "pronto",
-        "textbox-editor-cancel": "cancelar"
+        "header.new-textbox": "nova caixa de texto",
+        "header.select-all": "selecionar tudo",
+        "header.edit-textbox": "editar caixa de texto",
+        "header.delete-textbox": "excluir caixa de texto",
+        "header.increase-size": "aumentar tamanho",
+        "header.decrease-size": "diminuir tamanho",
+        "header.switch-alignment": "trocar alinhamento",
+        "textbox-editor.done": "pronto",
+        "textbox-editor.cancel": "cancelar"
     },
     "es": {
-        "new-textbox": "nuevo cuadro de texto",
-        "select-all": "seleccionar todo",
-        "edit-textbox": "editar cuadro de texto",
-        "delete-textbox": "borrar cuadro de texto",
-        "increase-size": "aumentar tamaño",
-        "decrease-size": "disminuir tamaño",
-        "switch-alignment": "cambiar alineación",
-        "textbox-editor-done": "listo",
-        "textbox-editor-cancel": "cancelar"
+        "header.new-textbox": "nuevo cuadro de texto",
+        "header.select-all": "seleccionar todo",
+        "header.edit-textbox": "editar cuadro de texto",
+        "header.delete-textbox": "borrar cuadro de texto",
+        "header.increase-size": "aumentar tamaño",
+        "header.decrease-size": "disminuir tamaño",
+        "header.switch-alignment": "cambiar alineación",
+        "textbox-editor.done": "listo",
+        "textbox-editor.cancel": "cancelar"
     }
 }
