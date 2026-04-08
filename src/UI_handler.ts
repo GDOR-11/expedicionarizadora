@@ -15,6 +15,9 @@ const elements: { [id: string]: HTMLElement } = {
     "textbox-editor-input": null,
     "textbox-editor-done": null,
     "textbox-editor-cancel": null,
+    "error-popup-container": null,
+    "error-message": null,
+    "error-popup-ok": null,
     "select-font": null,
     "increase-size": null,
     "decrease-size": null,
@@ -29,15 +32,16 @@ for (const id in elements) {
     elements[id] = element;
 }
 
-(() => {
+const language = (() => {
     let language_tag = (navigator.language || navigator.languages[0] || "pt").split("-")[0];
     if (!(language_tag in languages)) language_tag = "pt";
-    let language = languages[language_tag as keyof typeof languages];
+    const language = languages[language_tag as keyof typeof languages];
     for (let id in language) {
         document.querySelectorAll(`[data-i18n="${id}"]`).forEach(element => {
             element.textContent = language[id as keyof typeof language];
         });
     }
+    return language;
 })();
 
 for (let font of fonts) {
@@ -70,6 +74,15 @@ elements["select-all"].addEventListener("click", () => {
 });
 
 
+function open_error_popup(error_message: string) {
+    elements["error-popup-container"].style.display = "flex";
+    elements["error-message"].innerText = error_message;
+}
+elements["error-popup-ok"].addEventListener("click", () => {
+    elements["error-popup-container"].style.display = "none";
+});
+
+
 elements["edit-textbox"].addEventListener("click", () => {
     elements["textbox-editor-container"].style.display = "flex";
     const selected = textboxes.filter(textbox => textbox.selected);
@@ -78,12 +91,19 @@ elements["edit-textbox"].addEventListener("click", () => {
     }
 });
 elements["textbox-editor-done"].addEventListener("click", () => {
-    const selected = textboxes.filter(textbox => textbox.selected);
     const new_text = (elements["textbox-editor-input"] as HTMLTextAreaElement).value;
-    selected.forEach(textbox => textbox.text = new_text);
+    const invalid_char = new_text.split("").find(char => char !== "\n" && !Object.keys(get_font("EMSAllure").chars).includes(char));
+
+    if (invalid_char !== undefined) {
+        open_error_popup(language["error.invalid-character"] + invalid_char);
+    } else {
+        const selected = textboxes.filter(textbox => textbox.selected);
+        selected.forEach(textbox => textbox.text = new_text);
+        broadcast_update();
+    }
+
     elements["textbox-editor-container"].style.display = "none";
     (elements["textbox-editor-input"] as HTMLTextAreaElement).value = "";
-    broadcast_update();
 });
 elements["textbox-editor-cancel"].addEventListener("click", () => {
     elements["textbox-editor-container"].style.display = "none";

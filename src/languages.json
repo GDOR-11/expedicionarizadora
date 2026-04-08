@@ -8,7 +8,9 @@
         "header.decrease-size": "decrease size",
         "header.switch-alignment": "switch alignment",
         "textbox-editor.done": "done",
-        "textbox-editor.cancel": "cancel"
+        "textbox-editor.cancel": "cancel",
+        "error.invalid-character": "invalid character: ",
+        "error-popup.ok": "OK"
     },
     "pt": {
         "header.new-textbox": "nova caixa de texto",
@@ -19,7 +21,9 @@
         "header.decrease-size": "diminuir tamanho",
         "header.switch-alignment": "trocar alinhamento",
         "textbox-editor.done": "pronto",
-        "textbox-editor.cancel": "cancelar"
+        "textbox-editor.cancel": "cancelar",
+        "error.invalid-character": "caractere inválido: ",
+        "error-popup.ok": "OK"
     },
     "es": {
         "header.new-textbox": "nuevo cuadro de texto",
@@ -30,6 +34,8 @@
         "header.decrease-size": "disminuir tamaño",
         "header.switch-alignment": "cambiar alineación",
         "textbox-editor.done": "listo",
-        "textbox-editor.cancel": "cancelar"
+        "textbox-editor.cancel": "cancelar",
+        "error.invalid-character": "carácter no válido:",
+        "error-popup.ok": "OK"
     }
 }
