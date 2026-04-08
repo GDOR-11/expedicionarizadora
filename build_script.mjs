@@ -9,7 +9,7 @@ await fs.rm("dist", { recursive: true, force: true }).catch(() => {});
 
 console.log("building...");
 const ctx = await esbuild.context({
-    entryPoints: ["./src/index.js", "./src/index.css"],
+    entryPoints: ["./src/index.tsx", "./src/styles.css"],
     minify: !debug,
     bundle: true,
     outdir: "dist",
@@ -19,9 +19,10 @@ const ctx = await esbuild.context({
         htmlPlugin({
             files: [
                 {
-                    entryPoints: ["src/index.css", "src/index.ts"],
+                    entryPoints: ["src/index.tsx", "src/styles.css"],
                     filename: "index.html",
-                    htmlTemplate: "./src/index.html"
+                    htmlTemplate: "./src/index.html",
+                    scriptLoading: "module"
                 }
             ]
         })

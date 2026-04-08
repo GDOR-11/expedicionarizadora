@@ -22,4 +22,4 @@ for (const font of fonts) {
     }
 }
 const json = JSON.stringify(data, null, 4);
-Deno.writeFile("../src/data.json", new TextEncoder().encode(json));
+Deno.writeFile("../src/assets/data.json", new TextEncoder().encode(json));
