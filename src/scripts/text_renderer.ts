@@ -1,7 +1,7 @@
 import type RenderSpace from "movable-render-space";
 import { vec2 } from "gl-matrix";
 
-import data from "./data.json";
+import data from "../assets/data.json";
 import type Textbox from "./textbox";
 
 export type FontId = keyof typeof data;

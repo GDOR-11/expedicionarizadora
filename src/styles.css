@@ -18,7 +18,7 @@ body {
     gap: 16px;
 }
 
-.header > button, select {
+button, select {
     border: 1px solid #404040;
     text-align: center;
     border-radius: 4px;
@@ -34,7 +34,7 @@ canvas {
     margin: 0px;
 }
 
-#textbox-editor-container {
+.popup-container {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -46,7 +46,7 @@ canvas {
     background-color: #00000080;
 }
 
-#textbox-editor {
+.popup {
     border-radius: 10px;
     border: 1px solid #a0a0a0;
     background-color: #ffffff;
