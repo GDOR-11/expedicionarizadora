@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>song template generator</title>
+        <title>expedicionarizadora</title>
     <link rel="stylesheet" href="index.css"></head>
     <body>
         <div id="default-header" class="header">
@@ -17,12 +17,20 @@
             <button id="switch-alignment" data-i18n="header.switch-alignment"></button>
         </div>
         <canvas id="editor"></canvas>
-        <div id="textbox-editor-container" style="display: none;">
-            <div id="textbox-editor">
+        <div id="textbox-editor-container" class="popup-container">
+            <div class="popup">
                 <textarea id="textbox-editor-input"></textarea>
-                <div id="textbox-editor-buttons">
+                <div class="popup-buttons">
                     <button id="textbox-editor-done" data-i18n="textbox-editor.done"></button>
                     <button id="textbox-editor-cancel" data-i18n="textbox-editor.cancel"></button>
+                </div>
+            </div>
+        </div>
+        <div id="error-popup-container" class="popup-container">
+            <div class="popup">
+                <p id="error-message">caractere inválido: banana</p>
+                <div class="popup-buttons">
+                    <button id="error-popup-ok" data-i18n="error-popup.ok"></button>
                 </div>
             </div>
         </div>

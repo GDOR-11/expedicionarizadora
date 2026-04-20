@@ -1,10 +1,10 @@
 {
-    "name": "song-copier-template-generator",
+    "name": "expedicionarizadora",
     "version": "1.0.0",
     "keywords": [],
     "author": "GDOR-11",
     "license": "MIT",
-    "description": "A song template (.st) generator for the Song Copier",
+    "description": "A song template (.st) generator for a copying machine",
     "scripts": {
         "build": "node build_script.mjs",
         "start": "node build_script.mjs"
