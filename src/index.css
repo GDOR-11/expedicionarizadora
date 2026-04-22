@@ -4,7 +4,7 @@ body {
 }
 
 .header {
-    background-color: #808080b0;
+    background-color: #808080d0;
     box-sizing: border-box;
     width: 100%;
     padding: 16px;
@@ -25,6 +25,13 @@ button, select {
     background-color: #f0f0f0;
     color: #000000;
     font-size: 100%;
+}
+#num-copies-label {
+    color: white;
+    font-size: 1.2em;
+}
+#num-copies {
+    width: 5em;
 }
 
 canvas {

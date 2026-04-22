@@ -2,6 +2,7 @@
     "en": {
         "header.new-textbox": "new textbox",
         "header.select-all": "select all",
+        "header.num-copies": "number of copies:",
         "header.edit-textbox": "edit texbox",
         "header.delete-textbox": "delete textbox",
         "header.increase-size": "increase size",
@@ -15,6 +16,7 @@
     "pt": {
         "header.new-textbox": "nova caixa de texto",
         "header.select-all": "selecionar tudo",
+        "header.num-copies": "número de cópias:",
         "header.edit-textbox": "editar caixa de texto",
         "header.delete-textbox": "excluir caixa de texto",
         "header.increase-size": "aumentar tamanho",
@@ -28,6 +30,7 @@
     "es": {
         "header.new-textbox": "nuevo cuadro de texto",
         "header.select-all": "seleccionar todo",
+        "header.num-copies": "número de copias:",
         "header.edit-textbox": "editar cuadro de texto",
         "header.delete-textbox": "borrar cuadro de texto",
         "header.increase-size": "aumentar tamaño",

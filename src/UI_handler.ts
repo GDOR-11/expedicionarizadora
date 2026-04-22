@@ -9,6 +9,7 @@ const elements: { [id: string]: HTMLElement } = {
     "edit-header": null,
     "new-textbox": null,
     "select-all": null,
+    "num-copies": null,
     "delete-textbox": null,
     "edit-textbox": null,
     "textbox-editor-container": null,

@@ -1,39 +1,45 @@
 <!DOCTYPE html><html lang="en"><head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>expedicionarizadora</title>
-    <link rel="stylesheet" href="index.css"></head>
-    <body>
-        <div id="default-header" class="header">
-            <button id="new-textbox" data-i18n="header.new-textbox"></button>
-            <button id="select-all" data-i18n="header.select-all"></button>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expedicionarizadora</title>
+<link rel="stylesheet" href="index.css"></head>
+
+<body>
+    <div id="default-header" class="header">
+        <button id="new-textbox" data-i18n="header.new-textbox"></button>
+        <button id="select-all" data-i18n="header.select-all"></button>
+        <div id="num-copies-container">
+            <label for="num-copies" id="num-copies-label" data-i18n="header.num-copies"></label>
+            <input id="num-copies" type="number" inputmode="numeric" value="1" min="1">
         </div>
-        <div id="edit-header" class="header" style="display: none;">
-            <button id="edit-textbox" data-i18n="header.edit-textbox"></button>
-            <button id="delete-textbox" data-i18n="header.delete-textbox"></button>
-            <button id="increase-size" data-i18n="header.increase-size"></button>
-            <button id="decrease-size" data-i18n="header.decrease-size"></button>
-            <select id="select-font"></select>
-            <button id="switch-alignment" data-i18n="header.switch-alignment"></button>
-        </div>
-        <canvas id="editor"></canvas>
-        <div id="textbox-editor-container" class="popup-container">
-            <div class="popup">
-                <textarea id="textbox-editor-input"></textarea>
-                <div class="popup-buttons">
-                    <button id="textbox-editor-done" data-i18n="textbox-editor.done"></button>
-                    <button id="textbox-editor-cancel" data-i18n="textbox-editor.cancel"></button>
-                </div>
+    </div>
+    <div id="edit-header" class="header" style="display: none;">
+        <button id="edit-textbox" data-i18n="header.edit-textbox"></button>
+        <button id="delete-textbox" data-i18n="header.delete-textbox"></button>
+        <button id="increase-size" data-i18n="header.increase-size"></button>
+        <button id="decrease-size" data-i18n="header.decrease-size"></button>
+        <select id="select-font"></select>
+        <button id="switch-alignment" data-i18n="header.switch-alignment"></button>
+    </div>
+    <canvas id="editor"></canvas>
+    <div id="textbox-editor-container" class="popup-container">
+        <div class="popup">
+            <textarea id="textbox-editor-input"></textarea>
+            <div class="popup-buttons">
+                <button id="textbox-editor-done" data-i18n="textbox-editor.done"></button>
+                <button id="textbox-editor-cancel" data-i18n="textbox-editor.cancel"></button>
             </div>
         </div>
-        <div id="error-popup-container" class="popup-container">
-            <div class="popup">
-                <p id="error-message">caractere inválido: banana</p>
-                <div class="popup-buttons">
-                    <button id="error-popup-ok" data-i18n="error-popup.ok"></button>
-                </div>
+    </div>
+    <div id="error-popup-container" class="popup-container">
+        <div class="popup">
+            <p id="error-message"></p>
+            <div class="popup-buttons">
+                <button id="error-popup-ok" data-i18n="error-popup.ok"></button>
             </div>
         </div>
-    
+    </div>
+
+
 
 <script src="index.js" defer=""></script></body></html>
