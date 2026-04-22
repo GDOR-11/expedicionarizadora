@@ -1,4 +1,4 @@
-import { textboxes } from "./renderer";
+import { get_template, textboxes } from "./renderer";
 import Textbox from "./textbox";
 import languages from "./languages.json";
 import { type FontId, fonts, get_font } from "./text_renderer";
@@ -10,6 +10,7 @@ const elements: { [id: string]: HTMLElement } = {
     "new-textbox": null,
     "select-all": null,
     "num-copies": null,
+    "download-template": null,
     "delete-textbox": null,
     "edit-textbox": null,
     "textbox-editor-container": null,
@@ -72,6 +73,25 @@ elements["new-textbox"].addEventListener("click", () => {
 elements["select-all"].addEventListener("click", () => {
     textboxes.forEach(textbox => textbox.selected = true);
     broadcast_update();
+});
+elements["download-template"].addEventListener("click", () => {
+    const num_copies = (elements["num-copies"] as HTMLInputElement).value;
+    if (num_copies === "") {
+        open_error_popup(language["error.num-copies"]);
+        return;
+    }
+    const template = num_copies + "\n" + get_template();
+    const blob = new Blob([template], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.target = "_blank";
+    a.download = "template.st";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
 });
 
 

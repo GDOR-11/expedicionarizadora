@@ -20,6 +20,11 @@ new ResizeObserver(entries => {
 
 export const textboxes: Textbox[] = [];
 
+let template = "";
+export function get_template() {
+    return template;
+}
+
 export function render() {
     space.clearScreen();
 
@@ -29,8 +34,9 @@ export function render() {
     space.ctx.fillRect(0, 0, 210, 297);
     space.ctx.shadowBlur = 0;
 
+    template = "";
     for (const textbox of textboxes) {
-        textbox.render(space);
+        template += textbox.render(space);
     }
 }
 render();

@@ -3,7 +3,8 @@
         "header.new-textbox": "new textbox",
         "header.select-all": "select all",
         "header.num-copies": "number of copies:",
-        "header.edit-textbox": "edit texbox",
+        "header.download-template": "download template",
+        "header.edit-textbox": "edit textbox",
         "header.delete-textbox": "delete textbox",
         "header.increase-size": "increase size",
         "header.decrease-size": "decrease size",
@@ -11,12 +12,14 @@
         "textbox-editor.done": "done",
         "textbox-editor.cancel": "cancel",
         "error.invalid-character": "invalid character: ",
+        "error.num-copies": "please enter a valid number of copies",
         "error-popup.ok": "OK"
     },
     "pt": {
         "header.new-textbox": "nova caixa de texto",
         "header.select-all": "selecionar tudo",
         "header.num-copies": "número de cópias:",
+        "header.download-template": "baixar template",
         "header.edit-textbox": "editar caixa de texto",
         "header.delete-textbox": "excluir caixa de texto",
         "header.increase-size": "aumentar tamanho",
@@ -25,12 +28,14 @@
         "textbox-editor.done": "pronto",
         "textbox-editor.cancel": "cancelar",
         "error.invalid-character": "caractere inválido: ",
+        "error.num-copies": "por favor, insira um número válido de cópias",
         "error-popup.ok": "OK"
     },
     "es": {
         "header.new-textbox": "nuevo cuadro de texto",
         "header.select-all": "seleccionar todo",
         "header.num-copies": "número de copias:",
+        "header.download-template": "descargar template",
         "header.edit-textbox": "editar cuadro de texto",
         "header.delete-textbox": "borrar cuadro de texto",
         "header.increase-size": "aumentar tamaño",
@@ -39,6 +44,7 @@
         "textbox-editor.done": "listo",
         "textbox-editor.cancel": "cancelar",
         "error.invalid-character": "carácter no válido:",
+        "error.num-copies": "por favor, introduzca un número válido de copias",
         "error-popup.ok": "OK"
     }
 }

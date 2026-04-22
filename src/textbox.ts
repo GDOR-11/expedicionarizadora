@@ -11,10 +11,8 @@ export default class Textbox {
         public alignment: "left" | "center" | "right" = "left"
     ) { }
 
-    render(space: RenderSpace) {
+    render(space: RenderSpace): string {
         const AABB = this.getAABB();
-
-        render_textbox(space, this);
 
         if (this.selected) {
             space.ctx.strokeStyle = "highlight";
@@ -26,6 +24,8 @@ export default class Textbox {
                 AABB[1][1] - AABB[0][1],
             );
         }
+
+        return render_textbox(space, this);
     }
 
     getAABB(): [[number, number], [number, number]] {
