@@ -21,7 +21,7 @@ type Character = {
 function render_character(space: RenderSpace, character: Character): string {
     const font = data[character.font];
     const char_data = font.chars[character.char as keyof typeof font.chars];
-    if (!char_data) return;
+    if (!char_data) return "";
 
     let path = (char_data.d as string | null) ?? "";
     let penup = true;
@@ -42,13 +42,13 @@ function render_character(space: RenderSpace, character: Character): string {
         Math.round(v[0] * 10) / 10,
         Math.round(v[1] * 10) / 10
     );
-    const vec2_to_str = (v: vec2) => `${Math.round(v[0] * 10) / 10},${Math.round(v[0] * 10) / 10};`;
+    const vec2_to_str = (v: vec2) => `C${Math.round(v[0] * 10)},${Math.round(v[0] * 10)};`;
 
     const number_regex = " ([+-]?(?:\\d+(?:[.]\\d*)?(?:[eE][+-]?\\d+)?|[.]\\d+(?:[eE][+-]?\\d+)?))";
     while (path.length > 0) {
         const cmd = path[0];
         if (cmd === "M") {
-            const [_, x, y, rest] = path.match(`M${number_regex.repeat(2)} ?(.*)$`);
+            const [_, x, y, rest] = path.match(`M${number_regex.repeat(2)} ?(.*)$`)!;
             path = rest;
 
             font_to_screen(pen_pos, x, y);
@@ -64,7 +64,7 @@ function render_character(space: RenderSpace, character: Character): string {
 
             space.ctx.moveTo(pen_pos[0], pen_pos[1]);
         } else if (cmd === "L") {
-            const [_, x, y, rest] = path.match(`L${number_regex.repeat(2)} ?(.*)$`);
+            const [_, x, y, rest] = path.match(`L${number_regex.repeat(2)} ?(.*)$`)!;
             path = rest;
 
             font_to_screen(pen_pos, x, y);
@@ -77,18 +77,18 @@ function render_character(space: RenderSpace, character: Character): string {
 
             space.ctx.lineTo(pen_pos[0], pen_pos[1]);
         } else if (cmd === "Z") {
-            const [_, rest] = path.match(/Z ?(.*)$/);
+            const [_, rest] = path.match(/Z ?(.*)$/)!;
             path = rest;
 
             if (penup) {
                 penup = false;
                 template += "D;"
             }
-            template += vec2_to_str(first_point);
+            template += vec2_to_str(first_point!);
 
             space.ctx.closePath();
         } else if (cmd === "C") {
-            const [_, x1, y1, x2, y2, x, y, rest] = path.match(`C${number_regex.repeat(6)} ?(.*)$`);
+            const [_, x1, y1, x2, y2, x, y, rest] = path.match(`C${number_regex.repeat(6)} ?(.*)$`)!;
             path = rest;
 
             let p0 = pen_pos;

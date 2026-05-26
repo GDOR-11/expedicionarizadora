@@ -13,7 +13,7 @@ type Pointer = {
 const pointers: { [id: number]: Pointer } = {};
 
 canvas.addEventListener("pointerdown", event => {
-    let target: Textbox | null = null;
+    let target: Textbox | undefined;
     for (const textbox of textboxes) {
         const AABB = textbox.getAABB();
         const [x, y] = space.screenToRenderSpace([event.offsetX, event.offsetY]);
