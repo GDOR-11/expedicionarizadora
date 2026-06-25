@@ -42,7 +42,7 @@ function render_character(space: RenderSpace, character: Character): string {
         Math.round(v[0] * 10) / 10,
         Math.round(v[1] * 10) / 10
     );
-    const vec2_to_str = (v: vec2) => `C${Math.round(v[0] * 10)},${Math.round(v[0] * 10)};`;
+    const vec2_to_str = (v: vec2) => `C${Math.round(v[0] * 10)},${Math.round(v[1] * 10)};`;
 
     const number_regex = " ([+-]?(?:\\d+(?:[.]\\d*)?(?:[eE][+-]?\\d+)?|[.]\\d+(?:[eE][+-]?\\d+)?))";
     while (path.length > 0) {
