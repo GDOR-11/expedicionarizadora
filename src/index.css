@@ -27,6 +27,7 @@ button, select {
     font-size: 1em;
 }
 #num-copies-container {
+    display: none;
     background-color: #f0f0f0;
     border: 1px solid #404040;
     border-radius: 4px;
